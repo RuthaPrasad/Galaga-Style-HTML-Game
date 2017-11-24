@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Star Wars</title>
+		<style>
+			body
+			{
+				background-color:#050a14;
+			}
+			canvas
+			{
+				position: absolute;
+				background:transparent;
+				display: block;
+			}
+			
+			#background
+			{
+				z-index: -2;
+			}
+			#main
+			{
+				z-index: -1;
+			}
+			#ship
+			{
+				z-index: 0;
+			}
+			.score
+			{
+				position: absolute;
+				top: 5%;
+				left:5%;
+				color: #ffff00;
+				font-family: Helvetica, sans-serif;
+				cursor: default;
+				font-style:bold;
+				font-size:35px;
+			}
+			.game-over
+			{
+				position: absolute;
+				top:40%;
+				left:40%;
+				color: #ff0000;
+				font-family: Helvetica, sans-serif;
+				font-size: 40px;
+				cursor: default;
+				font-style:italic;
+				font-align:center;
+				display: none;
+			}
+			.game-over span {
+				font-size: 40px;
+				cursor: pointer;
+				position: relative;
+				font-align:center;
+				left:25%
+			}
+			.game-over span:hover {
+				color: #FFD700;
+			}
+			.loading {
+				position: absolute;
+				top:40%;
+				left:27%;
+				color: #ffff00;
+				font-family: Helvetica, sans-serif;
+				font-size: 100px;
+				font-style:bold;
+				font-align:center;
+				cursor: default;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="background" width="1265" height="575"></canvas>
+		<canvas id="main" width="1265" height="575"></canvas>
+		<canvas id="ship" width="1265" height="575"></canvas>
+		
+		<div class="score">Score : <span id="score"></span></div>
+		<div class="game-over" id="game-over">GAME OVER</br></br><span onclick="game.restart()">Restart</span></div>
+		<div class="loading" id="loading">STAR WARS</div>
+	<!--	<script>
+			var canvs = document.getElementById("background");
+			canvs.width = window.innerWidth/1.01;
+			canvs.height = window.innerHeight/1.03;
+			var canvs1 = document.getElementById("main");
+			canvs1.width = window.innerWidth/1.01;
+			canvs1.height = window.innerHeight/1.03;
+			var canvs2 = document.getElementById("ship");
+			canvs2.width = window.innerWidth/1.01;
+			canvs2.height = window.innerHeight1/1.03;
+			
+		</script>-->
+		<script src="code - Copy.js"></script>
+	
+	</body>
+</html>
